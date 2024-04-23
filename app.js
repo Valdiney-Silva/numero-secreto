@@ -1,5 +1,5 @@
 let listaNumerosGerados = [];
-let quantidadeNumeros = 10;
+let quantidadeNumeros = prompt("Digite o número limite de números a serem sorteados.");
 let numeroSecreto = gerarNumeroAleatorio();
 
 function exibirTextoNaTela(tag, texto) {
@@ -10,9 +10,12 @@ function exibirTextoNaTela(tag, texto) {
 }
 
 function textoInicial() {
-    exibirTextoNaTela("h1", "Bem vindo ao jogo do número secreto!");
-    exibirTextoNaTela("p", "Escolha número entre 1 e 10");
-    console.log(numeroSecreto);
+    while (quantidadeNumeros == "") {
+        quantidadeNumeros = prompt("Digite o número limite de números a serem sorteados.");
+    }
+        exibirTextoNaTela("h1", "Bem vindo ao jogo do número secreto!");
+        exibirTextoNaTela("p", `Escolha um número entre 1 e ${quantidadeNumeros}`);
+        console.log(numeroSecreto);
 }
 
 textoInicial();
