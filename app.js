@@ -39,12 +39,12 @@ function verificarChute() {
             exibirTextoNaTela("h1", "Você errou...");
             exibirTextoNaTela("p", "O número digitado é maior que o número secreto. Digite um número menor!");
             limparCampo();
-            console.log(`tentativa de número: ${tentativas}`);
+          //  console.log(`tentativa de número: ${tentativas}`);
         } else {
             exibirTextoNaTela("h1", "Você errou...");
             exibirTextoNaTela("p", "O número digitado é menor que o número secreto. Digite um número maior!");
             limparCampo();
-            console.log(`tentativa de número: ${tentativas}`);
+           // console.log(`tentativa de número: ${tentativas}`);
         }
         tentativas++;
     }
