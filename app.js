@@ -11,7 +11,7 @@ function exibirTextoNaTela(tag, texto) {
 
 function textoInicial() {
     while (quantidadeNumeros == "") {
-        quantidadeNumeros = prompt("Digite o número limite de números a serem sorteados.");
+        quantidadeNumeros = prompt("Digite o limite de números a serem sorteados.");
     }
         exibirTextoNaTela("h1", "Bem vindo ao jogo do número secreto!");
         exibirTextoNaTela("p", `Escolha um número entre 1 e ${quantidadeNumeros}`);
@@ -32,14 +32,14 @@ function verificarChute() {
         exibirTextoNaTela("h1", "Parabéns!");
         exibirTextoNaTela("p", mensagemTentativas);
         habilitarBotao();
-        console.log(`tentativa de número: ${tentativas}`);
+        //console.log(`tentativa de número: ${tentativas}`);
 
     } else {
         if (chute > numeroSecreto) {
             exibirTextoNaTela("h1", "Você errou...");
             exibirTextoNaTela("p", "O número digitado é maior que o número secreto. Digite um número menor!");
             limparCampo();
-          //  console.log(`tentativa de número: ${tentativas}`);
+            //console.log(`tentativa de número: ${tentativas}`);
         } else {
             exibirTextoNaTela("h1", "Você errou...");
             exibirTextoNaTela("p", "O número digitado é menor que o número secreto. Digite um número maior!");
