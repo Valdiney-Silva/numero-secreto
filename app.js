@@ -1,11 +1,15 @@
 let listaNumerosGerados = [];
-let quantidadeNumeros = 10;
+let quantidadeNumeros = prompt("Digite o limite de números a serem sorteados");
 let numeroSecreto = gerarNumeroAleatorio();
 
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
     responsiveVoice.speak(texto, "Brazilian Portuguese Female", {rate: 1.2});
+}
+
+function verificarNumeroDigitado(){
+    
 }
 
 function textoInicial() {
