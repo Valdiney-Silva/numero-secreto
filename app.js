@@ -5,17 +5,20 @@ let numeroSecreto = gerarNumeroAleatorio();
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
-    responsiveVoice.speak(texto, "Brazilian Portuguese Female", {rate: 1.2});
+    responsiveVoice.speak(texto, "Brazilian Portuguese Female", { rate: 1.2 });
 }
 
-function verificarNumeroDigitado(){
-    
-}
+//TENTATIVA DE VERIFICAR NUMERO DIGITADO
+// function verificarNumeroDigitado() {
+//     let eNumero = typeof(quantidadeNumeros) != Number ? false : true;
+//     while (quantidadeNumeros == "" || eNumero == false) {
+//         quantidadeNumeros = prompt("Digite o limite de números a serem sorteados.");
+//     }
+// }
 
-function textoInicial() {
-    while (quantidadeNumeros == "") {
-        quantidadeNumeros = prompt("Digite o limite de números a serem sorteados.");
-    }
+function textoInicial() { 
+    verificarNumeroDigitado();
+   
     exibirTextoNaTela("h1", "Bem vindo ao jogo do número secreto!");
     exibirTextoNaTela("p", `Escolha um número entre 1 e ${quantidadeNumeros}`);
     console.log(numeroSecreto);
@@ -25,6 +28,8 @@ function textoInicial() {
 }
 
 textoInicial();
+
+
 
 let tentativas = 1;
 
